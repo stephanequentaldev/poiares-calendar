@@ -60,7 +60,7 @@ export default async function EventDetailPage({ params }: PageProps) {
             alt={`Cartaz do evento ${event.title}`}
             fill
             sizes="(max-width: 768px) 100vw, 800px"
-            className="object-cover"
+            className="object-contain"
             priority
           />
         ) : (

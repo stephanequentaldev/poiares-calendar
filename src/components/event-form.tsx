@@ -198,8 +198,8 @@ export function EventForm({ categories, userId, event }: Props) {
       <div className="flex flex-col gap-2">
         <Label>Imagem do cartaz (opcional)</Label>
         {posterPreview ? (
-          <div className="relative w-full max-w-xs aspect-[4/3] rounded-xl overflow-hidden border border-border">
-            <Image src={posterPreview} alt="Pré-visualização do cartaz" fill className="object-cover" />
+          <div className="relative w-full max-w-xs aspect-[4/3] rounded-xl overflow-hidden border border-border bg-secondary">
+            <Image src={posterPreview} alt="Pré-visualização do cartaz" fill className="object-contain" />
             <button
               type="button"
               onClick={() => { setPosterFile(null); setPosterPreview(null); }}

@@ -20,7 +20,7 @@ export function EventCard({ event }: { event: EventWithRelations }) {
               alt={`Cartaz do evento ${event.title}`}
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-              className="object-cover transition-transform duration-300 group-hover:scale-105"
+              className="object-contain transition-transform duration-300 group-hover:scale-105"
             />
           ) : (
             <div className="flex h-full items-center justify-center">
