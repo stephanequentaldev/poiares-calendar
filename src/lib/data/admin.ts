@@ -1,18 +1,19 @@
 import { createClient } from "@/lib/supabase/server";
-import type { EventWithRelations, EventStatus, Profile } from "@/types/database";
+import type { EventWithRelations, EventStatus, Profile, Suggestion } from "@/types/database";
 
 const EVENT_SELECT = "*, category:categories(*)";
 
 export async function getAdminStats() {
   const supabase = await createClient();
 
-  const [pending, approved, rejected, finished, users, total] = await Promise.all([
+  const [pending, approved, rejected, finished, users, total, unreadSuggestions] = await Promise.all([
     supabase.from("events").select("id", { count: "exact", head: true }).eq("status", "pendente"),
     supabase.from("events").select("id", { count: "exact", head: true }).eq("status", "aprovado"),
     supabase.from("events").select("id", { count: "exact", head: true }).eq("status", "rejeitado"),
     supabase.from("events").select("id", { count: "exact", head: true }).eq("status", "terminado"),
     supabase.from("profiles").select("id", { count: "exact", head: true }),
     supabase.from("events").select("id", { count: "exact", head: true }),
+    supabase.from("suggestions").select("id", { count: "exact", head: true }).eq("is_read", false),
   ]);
 
   return {
@@ -22,6 +23,7 @@ export async function getAdminStats() {
     finished: finished.count ?? 0,
     users: users.count ?? 0,
     total: total.count ?? 0,
+    unreadSuggestions: unreadSuggestions.count ?? 0,
   };
 }
 
@@ -59,4 +61,15 @@ export async function getAllUsers() {
   const { data, error } = await supabase.from("profiles").select("*").order("created_at", { ascending: false });
   if (error) throw error;
   return (data ?? []) as Profile[];
+}
+
+export async function getSuggestions() {
+  const supabase = await createClient();
+  const { data, error } = await supabase
+    .from("suggestions")
+    .select("*")
+    .order("is_read", { ascending: true })
+    .order("created_at", { ascending: false });
+  if (error) throw error;
+  return (data ?? []) as Suggestion[];
 }

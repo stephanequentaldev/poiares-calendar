@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { redirect } from "next/navigation";
 import Link from "next/link";
-import { Clock, CheckCircle2, XCircle, CalendarCheck2, Users, CalendarDays, ArrowRight } from "lucide-react";
+import { Clock, CheckCircle2, XCircle, CalendarCheck2, Users, CalendarDays, ArrowRight, MessageSquare } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { EventStatusBadge } from "@/components/event-status-badge";
@@ -29,6 +29,7 @@ export default async function AdminPage() {
     { label: "Terminados", value: stats.finished, icon: CalendarCheck2, href: "/admin/eventos?estado=terminado" },
     { label: "Utilizadores", value: stats.users, icon: Users, href: "/admin/utilizadores" },
     { label: "Total de eventos", value: stats.total, icon: CalendarDays, href: "/admin/eventos" },
+    { label: "Sugestões por ler", value: stats.unreadSuggestions, icon: MessageSquare, href: "/admin/sugestoes" },
   ];
 
   return (
