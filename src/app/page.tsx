@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { CalendarDays, ArrowRight, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -14,15 +15,25 @@ export default async function HomePage() {
 
   return (
     <div className="animate-fade-in">
-      <section className="border-b border-border bg-secondary/50">
-        <div className="container-page py-16 md:py-24 text-center flex flex-col items-center gap-6">
-          <span className="inline-flex items-center gap-2 rounded-full bg-white border border-border px-4 py-1.5 text-sm text-primary font-medium">
+      <section className="relative border-b border-border overflow-hidden min-h-[480px] md:min-h-[560px] flex items-center">
+        <Image
+          src="/branding/hero-municipio.jpg"
+          alt=""
+          fill
+          priority
+          className="object-cover"
+        />
+        {/* Sobreposição para o texto continuar legível sobre a foto */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/45 to-[#3f5c22]/90" />
+
+        <div className="relative container-page py-16 md:py-24 text-center flex flex-col items-center gap-6">
+          <span className="inline-flex items-center gap-2 rounded-full bg-white/95 border border-white/20 px-4 py-1.5 text-sm text-primary font-medium">
             <CalendarDays className="h-4 w-4" /> Município de Vila Nova de Poiares
           </span>
-          <h1 className="text-3xl md:text-5xl font-semibold tracking-tight max-w-3xl leading-tight">
+          <h1 className="text-3xl md:text-5xl font-semibold tracking-tight max-w-3xl leading-tight text-white">
             Todos os eventos do concelho, num só lugar
           </h1>
-          <p className="text-lg text-muted-foreground max-w-2xl">
+          <p className="text-lg text-white/90 max-w-2xl">
             Concertos, feiras, festas populares, exposições e muito mais. Descubra o que vai
             acontecer em Vila Nova de Poiares e participe na vida do município.
           </p>
@@ -35,7 +46,7 @@ export default async function HomePage() {
                 <CalendarDays /> Ver calendário
               </Link>
             </Button>
-            <Button asChild size="lg" variant="outline">
+            <Button asChild size="lg" variant="secondary">
               <Link href="/eventos">
                 Ver todos os eventos <ArrowRight />
               </Link>
