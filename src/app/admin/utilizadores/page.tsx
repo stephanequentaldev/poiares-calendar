@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { redirect } from "next/navigation";
-import { ShieldCheck } from "lucide-react";
+import Link from "next/link";
+import { ArrowLeft, ShieldCheck } from "lucide-react";
 import { getCurrentUser } from "@/lib/auth";
 import { getAllUsers } from "@/lib/data/admin";
 import { formatDate } from "@/lib/utils";
@@ -16,6 +17,9 @@ export default async function AdminUtilizadoresPage() {
 
   return (
     <div className="container-page py-10 animate-fade-in">
+      <Link href="/admin" className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-primary mb-4">
+        <ArrowLeft className="h-4 w-4" /> Voltar
+      </Link>
       <h1 className="text-3xl font-semibold mb-2">Utilizadores</h1>
       <p className="text-muted-foreground mb-8">{users.length} utilizador{users.length !== 1 ? "es" : ""} registado{users.length !== 1 ? "s" : ""}</p>
 

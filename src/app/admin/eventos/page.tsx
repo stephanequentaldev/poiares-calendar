@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { redirect } from "next/navigation";
 import Link from "next/link";
+import { ArrowLeft } from "lucide-react";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { AdminEventCard } from "@/components/admin-event-card";
 import { getCurrentUser } from "@/lib/auth";
@@ -33,6 +34,9 @@ export default async function AdminEventosPage({ searchParams }: PageProps) {
 
   return (
     <div className="container-page py-10 animate-fade-in">
+      <Link href="/admin" className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-primary mb-4">
+        <ArrowLeft className="h-4 w-4" /> Voltar
+      </Link>
       <h1 className="text-3xl font-semibold mb-6">Gestão de eventos</h1>
 
       <Tabs value={status ?? "todos"} className="mb-6">
