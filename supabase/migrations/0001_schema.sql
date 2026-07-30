@@ -1,5 +1,5 @@
 -- =========================================================
--- Calendário Municipal de Vila Nova de Poiares
+-- Calendário de Eventos - Vila Nova de Poiares
 -- Migração 0001: esquema base (tabelas, tipos, índices)
 -- =========================================================
 
@@ -84,7 +84,7 @@ create table public.events (
   constraint end_time_after_start check (end_time is null or end_time > start_time)
 );
 
-comment on table public.events is 'Eventos submetidos ao calendário municipal.';
+comment on table public.events is 'Eventos submetidos ao calendário dos Bombeiros Voluntários.';
 
 create index idx_events_status on public.events (status);
 create index idx_events_date on public.events (event_date);
@@ -142,5 +142,5 @@ insert into public.categories (name, slug, icon, sort_order) values
 
 insert into public.site_settings (key, value) values
   ('logo_url', null),
-  ('site_name', 'Calendário Municipal de Vila Nova de Poiares'),
-  ('contact_email', 'geral@cm-vilanovadepoiares.pt');
+  ('site_name', 'Calendário de Eventos - Vila Nova de Poiares'),
+  ('contact_email', 'geral@bvpoiares.pt');

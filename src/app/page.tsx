@@ -17,7 +17,7 @@ export default async function HomePage() {
     <div className="animate-fade-in">
       <section className="relative border-b border-border overflow-hidden min-h-[480px] md:min-h-[560px] flex items-center">
         <Image
-          src="/branding/hero-municipio.jpg"
+          src="/branding/hero-bombeiros.jpg"
           alt=""
           fill
           priority

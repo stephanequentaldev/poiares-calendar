@@ -3,23 +3,23 @@ import "./globals.css";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://calendario.cm-vilanovadepoiares.pt";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://calendario.bvvilanovadepoiares.pt";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Calendário Municipal | Vila Nova de Poiares",
-    template: "%s | Calendário Municipal de Vila Nova de Poiares",
+    default: "Calendário de Eventos | Bombeiros Voluntários de Vila Nova de Poiares",
+    template: "%s | Calendário de Eventos - Vila Nova de Poiares",
   },
   description:
-    "Consulte todos os eventos, festas populares, concertos, feiras e atividades culturais do Município de Vila Nova de Poiares.",
+    "Consulte todos os eventos, festas populares, concertos, feiras e atividades culturais dos Bombeiros Voluntários de Vila Nova de Poiares.",
   openGraph: {
     type: "website",
     locale: "pt_PT",
-    siteName: "Calendário Municipal de Vila Nova de Poiares",
-    title: "Calendário Municipal de Vila Nova de Poiares",
+    siteName: "Calendário de Eventos - Vila Nova de Poiares",
+    title: "Calendário de Eventos - Vila Nova de Poiares",
     description:
-      "Consulte todos os eventos, festas populares, concertos, feiras e atividades culturais do município.",
+      "Consulte todos os eventos, festas populares, concertos, feiras e atividades culturais dos Bombeiros Voluntários de Vila Nova de Poiares.",
   },
   robots: { index: true, follow: true },
 };

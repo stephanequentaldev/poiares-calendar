@@ -4,7 +4,7 @@ import { getSiteSettings } from "@/lib/settings";
 
 export const metadata: Metadata = {
   title: "Sobre",
-  description: "Saiba mais sobre o Calendário Municipal de Vila Nova de Poiares e como submeter eventos.",
+  description: "Saiba mais sobre o Calendário de Eventos - Vila Nova de Poiares e como submeter eventos.",
 };
 
 export default async function SobrePage() {
@@ -17,18 +17,19 @@ export default async function SobrePage() {
       <section className="mb-10">
         <h2 className="text-xl font-semibold mb-3">Objetivo</h2>
         <p className="text-foreground/90 leading-relaxed">
-          O Calendário Municipal de Vila Nova de Poiares foi criado para centralizar, num único
-          local, todos os eventos culturais, desportivos, religiosos e recreativos que decorrem no
-          concelho. O objetivo é facilitar o acesso à informação por parte de todos os cidadãos,
-          associações e visitantes, promovendo a participação na vida coletiva do município.
+          O Calendário de Eventos de Vila Nova de Poiares foi criado para
+          centralizar, num único local, todos os eventos culturais, desportivos, religiosos e
+          recreativos que decorrem no concelho. O objetivo é facilitar o acesso à informação por
+          parte de todos os cidadãos, associações e visitantes, promovendo a participação na vida
+          coletiva da comunidade.
         </p>
       </section>
 
       <section className="mb-10">
         <h2 className="text-xl font-semibold mb-3">Quem gere a plataforma</h2>
         <p className="text-foreground/90 leading-relaxed">
-          A plataforma é gerida pelo Município de Vila Nova de Poiares. Todos os eventos submetidos
-          por cidadãos e entidades são revistos pela equipa municipal antes de serem publicados,
+          A plataforma é gerida pelos Bombeiros Voluntários de Vila Nova de Poiares. Todos os eventos
+          submetidos por cidadãos e entidades são revistos pela equipa dos Bombeiros Voluntários antes de serem publicados,
           garantindo a qualidade e adequação da informação disponibilizada.
         </p>
       </section>
@@ -41,7 +42,7 @@ export default async function SobrePage() {
             "Aceda a \"Criar evento\" e preencha os dados: título, local, data, hora e categoria.",
             "Adicione, se possível, um cartaz e uma breve descrição.",
             "Submeta o evento — o estado inicial será \"Pendente\".",
-            "A equipa municipal analisa e aprova ou rejeita o pedido.",
+            "A equipa dos Bombeiros Voluntários analisa e aprova ou rejeita o pedido.",
             "Após aprovação, o evento fica visível a todos os visitantes.",
           ].map((step, i) => (
             <li key={i} className="flex items-start gap-3">

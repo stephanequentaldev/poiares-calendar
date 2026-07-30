@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { createClient } from "@/lib/supabase/server";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://calendario.cm-vilanovadepoiares.pt";
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://calendario.bvvilanovadepoiares.pt";
   const supabase = await createClient();
 
   const { data: events } = await supabase

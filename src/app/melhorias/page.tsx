@@ -3,7 +3,7 @@ import { SuggestionForm } from "@/components/suggestion-form";
 
 export const metadata: Metadata = {
   title: "Melhorias",
-  description: "Envie sugestões de melhoria para o Calendário Municipal de Vila Nova de Poiares.",
+  description: "Envie sugestões de melhoria para o Calendário de Eventos - Vila Nova de Poiares.",
 };
 
 export default function MelhoriasPage() {

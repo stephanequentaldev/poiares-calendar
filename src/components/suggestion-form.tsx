@@ -55,7 +55,7 @@ export function SuggestionForm() {
       <div className="flex flex-col items-center text-center gap-3 py-12 rounded-2xl border border-border bg-secondary/40">
         <CheckCircle2 className="h-10 w-10 text-primary" />
         <p className="font-medium">Obrigado pela sua sugestão!</p>
-        <p className="text-sm text-muted-foreground">A sua mensagem foi enviada com sucesso à equipa municipal.</p>
+        <p className="text-sm text-muted-foreground">A sua mensagem foi enviada com sucesso à equipa dos Bombeiros Voluntários.</p>
         <Button variant="outline" onClick={() => setSubmitted(false)}>
           Enviar outra sugestão
         </Button>

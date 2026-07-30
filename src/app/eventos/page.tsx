@@ -8,7 +8,7 @@ import { getPublicEvents, getCategories } from "@/lib/data/events";
 
 export const metadata: Metadata = {
   title: "Eventos",
-  description: "Consulte a lista completa de eventos aprovados no Município de Vila Nova de Poiares.",
+  description: "Consulte a lista completa de eventos aprovados dos Bombeiros Voluntários de Vila Nova de Poiares.",
 };
 
 interface PageProps {

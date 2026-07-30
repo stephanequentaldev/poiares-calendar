@@ -11,7 +11,7 @@ export async function getSiteSettings() {
 
   return {
     logoUrl: settings.logo_url || "/branding/logo-fallback.png",
-    siteName: settings.site_name || "Calendário Municipal de Vila Nova de Poiares",
-    contactEmail: settings.contact_email || "geral@cm-vilanovadepoiares.pt",
+    siteName: settings.site_name || "Calendário de Eventos - Vila Nova de Poiares",
+    contactEmail: settings.contact_email || "geral@bvpoiares.pt",
   };
 }

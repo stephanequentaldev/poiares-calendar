@@ -12,7 +12,7 @@ on conflict (id) do nothing;
 
 -- ---------------------------------------------------------
 -- LOGOS: leitura pública; escrita apenas administradores.
--- Permite trocar o logótipo do município sem alterar código.
+-- Permite trocar o logótipo dos Bombeiros Voluntários sem alterar código.
 -- ---------------------------------------------------------
 create policy "logos_public_read"
   on storage.objects for select

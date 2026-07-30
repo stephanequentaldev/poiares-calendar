@@ -1,6 +1,6 @@
-# Calendário Municipal — Vila Nova de Poiares
+# Calendário de Eventos — Vila Nova de Poiares
 
-Aplicação web para consulta e submissão de eventos do Município de Vila Nova de Poiares.
+Aplicação web para consulta e submissão de eventos dos Bombeiros Voluntários de Vila Nova de Poiares.
 
 **Stack:** Next.js 15 (App Router) · TypeScript · Tailwind CSS · shadcn/ui · Supabase (PostgreSQL, Auth, Storage) · Vercel
 
@@ -20,7 +20,7 @@ src/
 supabase/
   migrations/          scripts SQL completos (schema, funções, RLS, storage)
 public/
-  branding/            imagem de fallback do brasão do município
+  branding/            imagem de fallback do emblema dos Bombeiros Voluntários
 ```
 
 ---
@@ -40,7 +40,7 @@ public/
 4. Em **Authentication → Providers**, confirme que o método **Email** está ativo.
    Para testes rápidos, pode desativar "Confirm email" em **Authentication → Settings**.
 5. Em **Authentication → URL Configuration**, defina o **Site URL** para o domínio da aplicação
-   (ex: `https://calendario.cm-vilanovadepoiares.pt`) e adicione o mesmo domínio (e
+   (ex: `https://calendario.bvvilanovadepoiares.pt`) e adicione o mesmo domínio (e
    `http://localhost:3000` durante o desenvolvimento) em **Redirect URLs**.
 
 ### Definir o primeiro administrador
@@ -67,7 +67,7 @@ select cron.schedule('mark-events-finished', '0 3 * * *', 'select public.mark_ev
 O logótipo pode ser trocado sem alterar código, através da tabela `site_settings` e do bucket
 `logos` no Storage:
 
-1. Em **Storage → logos**, carregue o ficheiro do brasão do município.
+1. Em **Storage → logos**, carregue o ficheiro do emblema dos Bombeiros Voluntários.
 2. Copie a URL pública do ficheiro.
 3. No **SQL Editor**:
    ```sql
@@ -75,7 +75,7 @@ O logótipo pode ser trocado sem alterar código, através da tabela `site_setti
    ```
 
 Até isso ser feito, a aplicação usa automaticamente a imagem local em
-`public/branding/logo-fallback.jpg` (o brasão oficial já incluído no projeto).
+`public/branding/logo-fallback.png` (o emblema oficial já incluído no projeto).
 
 ---
 
@@ -107,7 +107,7 @@ Aceda a [http://localhost:3000](http://localhost:3000).
 ```bash
 git init
 git add .
-git commit -m "Calendário Municipal de Vila Nova de Poiares"
+git commit -m "Calendário de Eventos - Vila Nova de Poiares"
 git branch -M main
 git remote add origin <url-do-seu-repositorio>
 git push -u origin main
@@ -154,7 +154,7 @@ aprovação. Administradores estão isentos desta regra.
 
 | Bucket          | Conteúdo                       | Acesso                                     |
 |------------------|-----------------------------------|-----------------------------------------------|
-| `logos`           | Logótipo do município               | Leitura pública · escrita apenas admin          |
+| `logos`           | Logótipo dos Bombeiros Voluntários   | Leitura pública · escrita apenas admin          |
 | `event-images`     | Cartaz principal dos eventos         | Leitura pública · escrita pelo autor/admin      |
 | `gallery`          | Galeria adicional dos eventos         | Leitura pública · escrita pelo autor/admin      |
 | `avatars`          | Fotografias de perfil                 | Leitura pública · escrita pelo próprio          |

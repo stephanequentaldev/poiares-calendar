@@ -9,9 +9,9 @@ export async function SiteFooter() {
     <footer className="mt-20 border-t border-border bg-secondary/60">
       <div className="container-page py-12 grid gap-10 md:grid-cols-3">
         <div>
-          <h3 className="text-sm font-semibold mb-3">Calendário Municipal</h3>
+          <h3 className="text-sm font-semibold mb-3">Calendário de Eventos</h3>
           <p className="text-sm text-muted-foreground leading-relaxed">
-            Plataforma oficial de divulgação de eventos do Município de Vila Nova de Poiares.
+            Plataforma oficial de divulgação de eventos dos Bombeiros Voluntários de Vila Nova de Poiares.
           </p>
         </div>
         <div>
@@ -37,7 +37,7 @@ export async function SiteFooter() {
       </div>
       <div className="border-t border-border py-5">
         <p className="container-page text-xs text-muted-foreground">
-          © {new Date().getFullYear()} Município de Vila Nova de Poiares. Todos os direitos reservados.
+          © {new Date().getFullYear()} Bombeiros Voluntários de Vila Nova de Poiares. Todos os direitos reservados.
         </p>
       </div>
     </footer>

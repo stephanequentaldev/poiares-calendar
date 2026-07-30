@@ -4,7 +4,7 @@ import { getEventsForMonth } from "@/lib/data/events";
 
 export const metadata: Metadata = {
   title: "Calendário",
-  description: "Vista mensal de todos os eventos aprovados no Município de Vila Nova de Poiares.",
+  description: "Vista mensal de todos os eventos aprovados dos Bombeiros Voluntários de Vila Nova de Poiares.",
 };
 
 interface PageProps {

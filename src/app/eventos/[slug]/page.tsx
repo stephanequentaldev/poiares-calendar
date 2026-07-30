@@ -148,7 +148,7 @@ export default async function EventDetailPage({ params }: PageProps) {
       )}
 
       <div className="flex items-center gap-2 text-sm text-muted-foreground border-t border-border pt-6">
-        <User className="h-4 w-4" /> Evento submetido através da plataforma do Município
+        <User className="h-4 w-4" /> Evento submetido através da plataforma dos Bombeiros Voluntários
       </div>
     </div>
   );

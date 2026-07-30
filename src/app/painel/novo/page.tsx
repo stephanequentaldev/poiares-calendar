@@ -17,7 +17,7 @@ export default async function NovoEventoPage() {
       <h1 className="text-3xl font-semibold mb-2">Criar evento</h1>
       <p className="text-muted-foreground mb-8">
         Preencha os dados abaixo. O evento ficará com o estado &quot;Pendente&quot; até ser
-        aprovado pela equipa municipal.
+        aprovado pela equipa dos Bombeiros Voluntários.
       </p>
       <EventForm categories={categories} userId={user.id} />
     </div>
