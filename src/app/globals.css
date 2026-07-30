@@ -4,9 +4,9 @@
   --background: #ffffff;
   --foreground: #1b1b1b;
 
-  --primary: #5c8434;
+  --primary: #a4231f;
   --primary-foreground: #ffffff;
-  --primary-hover: #4d6f2b;
+  --primary-hover: #841b18;
 
   --secondary: #f1f2f1;
   --secondary-foreground: #1b1b1b;
@@ -15,12 +15,12 @@
   --muted-foreground: #6b6f68;
 
   --border: #e3e5e1;
-  --ring: #5c8434;
+  --ring: #a4231f;
 
   --card: #ffffff;
   --card-foreground: #1b1b1b;
 
-  --destructive: #b3261e;
+  --destructive: #b45309;
   --destructive-foreground: #ffffff;
 
   --success: #2f7a3d;
